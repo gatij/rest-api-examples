@@ -103,3 +103,5 @@ myvenv/
 
 *.sqlite3
 .DS_Store
+
+/cloud_images
