@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block style %}
+
+    {% endblock %}
+{% block content %}
+  <h2>IP-SPY API</h2>
+  <h3>It is a tool to get details of any IP Address you want.</h3>
+  <p>Ex: 14.139.240.247, 2405:204:e18c:f1e2:ec40:c933:f24:2b40 etc. </p>
+  <p>You can find from which city this IP belongs to.</p>
+  <p>It also give details about the country flag, sun-rise, sun-set and exact location on google maps.</p>
+  <p>So Spy the IP and Enjoy!!!</p>
+  <form method="get">
+    <input type="text" name="ipaddress">
+    <button type="submit">Get Details</button>
+  </form>
+  {% if search_result %}
+    {% if search_result.success %}
+      <p>IP Address : <strong>{{ search_result.ip }}</strong>, probable location in <strong>{{ search_result.country_name }}</strong> right now.</p>
+      <div>
+        <img src="{{search_result.location.country_flag}}"></div>
+     <div class="container">
+     	<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">State: {{search_result.region_name}}</h5>
+    <p class="card-text">{{ search_result.city}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Zip Code: {{search_result.zip}}</li>
+    <li class="list-group-item">Sun Rise: {{sun_result.results.astronomical_twilight_begin}}</li>
+    <li class="list-group-item">Sun Set: {{sun_result.results.astronomical_twilight_end}}</li>
+  </ul>
+</div>
+
+     </div>
+     
+  <iframe width="600"
+          height="450"
+          frameborder="0"
+          style="border:0"
+          src="https://www.google.com/maps/embed/v1/view?center={{ search_result.latitude }},{{ search_result.longitude }}&zoom=16&key={{search_result.map_api_key}}"
+          allowfullscreen></iframe>
+    {% else %}
+      <p><em>{{ search_result.message }}</em></p>
+    {% endif %}
+    
+  {% endif %}
+{% endblock %}
+
