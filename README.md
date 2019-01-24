@@ -8,8 +8,11 @@ An example project with three small apps explaining the concepts of public REST 
 Project gives an idea about consumption of the JSON data provided of public Restful APIs.
 
 1- IP-Spy (Put IP address and check the details)
+
 2- Github (Check no of public repos of any user)
+
 3- Air Tracker (Representation of AQI of cities using Django + Chart.JS)
+
 ![RESTful APIs Example Screenshot](https://drive.google.com/uc?export=view&id=1JK7Q6xFK0wINiKOzlMyDi3LhkxfJ9ZqR)
 
 This project is deployed at [rest-api-examples.herokuapp.com](https://rest-api-examples.herokuapp.com/).
