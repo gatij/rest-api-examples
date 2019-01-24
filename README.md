@@ -6,7 +6,7 @@
 
 An example project with three small apps explaining the concepts of public REST APIs . 
 
-![RESTful APIs Example Screenshot](https://drive.google.com/file/d/1JK7Q6xFK0wINiKOzlMyDi3LhkxfJ9ZqR)
+![RESTful APIs Example Screenshot](https://drive.google.com/uc?export=view&id=1JK7Q6xFK0wINiKOzlMyDi3LhkxfJ9ZqR)
 
 This project is deployed at [rest-api-examples.herokuapp.com](https://rest-api-examples.herokuapp.com/).
 
